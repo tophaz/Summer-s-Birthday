@@ -1,0 +1,145 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffe6f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff99cc;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Dancing Script', cursive;
+    animation: slide-in 1s ease-out;
+}
+
+@keyframes slide-in {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+nav {
+    background-color: #ff66b2;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffe6f0;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffe6f0;
+    position: relative;
+}
+
+.hero h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    color: #ff66b2;
+    animation: fade-in 2s ease-in;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: fade-in 2s ease-in;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#gallery {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#about, #message {
+    padding: 20px;
+    text-align: center;
+}
+
+#about h2, #message h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff66b2;
+    font-size: 2em;
+    position: relative;
+}
+
+#about h2::after, #message h2::after {
+    content: '♥';
+    font-family: 'FontAwesome';
+    position: absolute;
+    right: -25px;
+    top: -10px;
+    color: #ff66b2;
+    font-size: 0.8em;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+footer {
+    background-color: #ff66b2;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Dancing Script', cursive;
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
