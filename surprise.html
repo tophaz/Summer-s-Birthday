@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise for You, Samantha!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #ffe6f2; /* Soft pink background */
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            animation: fadeIn 3s ease-in-out;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #ff66b2;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.5rem;
+            color: #cc0099;
+            margin-bottom: 30px;
+        }
+        .surprise-button {
+            font-size: 1.5rem;
+            color: #ffffff;
+            background-color: #ff66b2;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            cursor: pointer;
+            box-shadow: 0 0 15px #ff66b2;
+            animation: pulse 2s infinite;
+        }
+        .surprise-button:hover {
+            background-color: #cc0099;
+        }
+        .from {
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #660033;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 15px #ff66b2; }
+            50% { box-shadow: 0 0 30px #ff66b2; }
+            100% { box-shadow: 0 0 15px #ff66b2; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Here is a Surprise for You!</h1>
+        <p>Click the button below to reveal your surprise.</p>
+        <a href="index.html">
+            <button class="surprise-button">CLICK ME 😄</button>
+        </a>
+        <p class="from">With love, from Victor 💖</p>
+    </div>
+</body>
+</html>
