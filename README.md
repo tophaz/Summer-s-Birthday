@@ -1,2 +1,2 @@
 # Summer-s-Birthday
-A simple website for my soulmate
+A simple website using HTML & CSS
